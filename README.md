@@ -11,4 +11,8 @@ Add and removes indentation to **YANG** config files **JSON** encoded.
 
 ## Where am I taking these JSON config files from?
 
-- See this great example: [YDK bgp_xr_json](https://github.com/CiscoDevNet/ydk-gen/tree/master/sdk/cpp/samples/bgp_xr_json)
+- Check out this great example: [YDK bgp_xr_json](https://github.com/CiscoDevNet/ydk-gen/tree/master/sdk/cpp/samples/bgp_xr_json)
+
+## See it in action
+
+- [Go Playground](https://play.golang.org/p/TUdaIF_NBp)
