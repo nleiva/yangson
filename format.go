@@ -20,10 +20,16 @@ func main() {
 	//Add indentation
 	b, _ = prettyprint(b)
 	//Remove indentation
-	b, _ = unprettyprint(b)
+	//b, _ = unprettyprint(b)
 
-	//Print one of the two options
-	fmt.Printf("%s", b)
+	//Print one of the two options for debugging
+	//fmt.Printf("%s", b)
+
+	//
+	err = ioutil.WriteFile("files/bgp_formatted.json", b, 0644)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func prettyprint(b []byte) ([]byte, error) {
