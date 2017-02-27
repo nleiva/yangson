@@ -19,11 +19,10 @@ func main() {
 
 	//Add indentation
 	b, _ = prettyprint(b)
-
 	//Remove indentation
 	b, _ = unprettyprint(b)
 
-	//Print one of the two optiona
+	//Print one of the two options
 	fmt.Printf("%s", b)
 }
 
