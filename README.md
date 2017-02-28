@@ -16,7 +16,6 @@ Add and removes indentation to **YANG** config files **JSON** encoded.
 		fmt.Print(err)
 	}
 
-	//Add indentation
 	b, _ = prettyprint(b)
 ```
 
@@ -30,14 +29,18 @@ Add and removes indentation to **YANG** config files **JSON** encoded.
 		fmt.Print(err)
 	}
 
-	//Remove indentation
 	b, _ = unprettyprint(b)
 ```
-
 
 ## Where am I taking these JSON config files from?
 
 - Check out this great example: [YDK bgp_xr_json](https://github.com/CiscoDevNet/ydk-gen/tree/master/sdk/cpp/samples/bgp_xr_json)
+
+
+## To Do list
+
+- Incorporate commit/push configs on ([github.go](github.go))
+- Add suport to clone or Wget/cURL a config ([github.go](github.go))
 
 
 ## See it in action
