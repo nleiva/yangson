@@ -10,7 +10,7 @@ Add and removes indentation to **YANG** config files **JSON** encoded.
 - input: [compact JSON](files/bgp.json)
 - output: [pretty printed JSON](files/bgp_formatted.json)
 
-```
+```go
 	b, err := ioutil.ReadFile("files/bgp.json")
 	if err != nil {
 		fmt.Print(err)
@@ -23,7 +23,7 @@ Add and removes indentation to **YANG** config files **JSON** encoded.
 - input: [pretty printed JSON](files/bgp_formatted.json)
 - output: [compact JSON](files/bgp.json)
 
-```
+```go
 	b, err := ioutil.ReadFile("files/bgp_formatted.json")
 	if err != nil {
 		fmt.Print(err)
