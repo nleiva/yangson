@@ -11,8 +11,10 @@ func main() {
 	//Option to read from static string
 	//b := []byte(`{"Cisco-IOS-XR-ipv4-bgp-cfg:bgp":"empty"}`)
 
-	//Option to read from file
-	b, err := ioutil.ReadFile("files/bgp.json") // just pass the file name
+	input := "files/bgp.json"
+	output := "files/bgp_formatted.json"
+
+	b, err := ioutil.ReadFile(input) // just pass the file name
 	if err != nil {
 		fmt.Print(err)
 	}
@@ -22,11 +24,7 @@ func main() {
 	//Remove indentation
 	//b, _ = unprettyprint(b)
 
-	//Print one of the two options for debugging
-	//fmt.Printf("%s", b)
-
-	//
-	err = ioutil.WriteFile("files/bgp_formatted.json", b, 0644)
+	err = ioutil.WriteFile(output, b, 0644)
 	if err != nil {
 		panic(err)
 	}
