@@ -32,10 +32,10 @@ Add and removes indentation to **YANG** config files **JSON** encoded.
 	b, _ = unprettyprint(b)
 ```
 
-## Where am I taking these JSON config files from?
+## Where are we taking these JSON config files from?
 
 - Check out this great example: [YDK bgp_xr_json](https://github.com/CiscoDevNet/ydk-gen/tree/master/sdk/cpp/samples/bgp_xr_json)
-
+- We will include further YDK samples here: [ydk-cpp-samples](ydk-cpp-samples)
 
 ## To Do list
 
