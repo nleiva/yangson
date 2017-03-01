@@ -1,0 +1,101 @@
+{
+  "Cisco-IOS-XR-clns-isis-cfg:isis": {
+    "instances": {
+      "instance": [
+        {
+          "instance-name": "7922",
+          "is-type": "level2",
+          "running": [
+            null
+          ],
+          "afs": {
+            "af": [
+              {
+                "af-name": "ipv6",
+                "saf-name": "unicast",
+                "af-data": {
+                  "metric-styles": {
+                    "metric-style": [
+                      {
+                        "level": "not-set",
+                        "style": "new-metric-style",
+                        "transition-state": "disabled"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "interfaces": {
+            "interface": [
+              {
+                "interface-name": "GigabitEthernet0/0/0/0",
+                "point-to-point": [
+                  null
+                ],
+                "running": [
+                  null
+                ],
+                "interface-afs": {
+                  "interface-af": [
+                    {
+                      "af-name": "ipv6",
+                      "saf-name": "unicast",
+                      "interface-af-data": {
+                        "running": [
+                          null
+                        ],
+                        "metrics": {
+                          "metric": [
+                            {
+                              "level": "not-set"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "interface-name": "Loopback60",
+                "running": [
+                  null
+                ],
+                "state": "passive",
+                "interface-afs": {
+                  "interface-af": [
+                    {
+                      "af-name": "ipv6",
+                      "saf-name": "unicast",
+                      "interface-af-data": {
+                        "running": [
+                          null
+                        ],
+                        "metrics": {
+                          "metric": [
+                            {
+                              "level": "not-set"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "nets": {
+            "net": [
+              {
+                "net-name": "49.0000.0020.0200.2002.00"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
