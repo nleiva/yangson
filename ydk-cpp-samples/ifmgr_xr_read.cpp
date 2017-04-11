@@ -22,18 +22,21 @@
 #include <ydk/netconf_provider.hpp>
 #include <ydk/types.hpp>
 
-#include "ydk_cisco_ios_xr/Cisco_IOS_XR_clns_isis_cfg.hpp"
-#include "ydk_cisco_ios_xr/Cisco_IOS_XR_clns_isis_datatypes.hpp"
+#include "ydk_cisco_ios_xr/Cisco_IOS_XR_ifmgr_cfg.hpp"
+#include "ydk_cisco_ios_xr/Cisco_IOS_XR_bundlemgr_cfg.hpp"
+#include "ydk_cisco_ios_xr/Cisco_IOS_XR_ipv6_ma_cfg.hpp"
+
 #include <spdlog/spdlog.h>
 
 #include "../args_parser.h"
 
 using namespace ydk;
-using namespace ydk::Cisco_IOS_XR_clns_isis_cfg;
-using namespace ydk::Cisco_IOS_XR_clns_isis_datatypes;
+using namespace ydk::Cisco_IOS_XR_ifmgr_cfg;
+using namespace ydk::Cisco_IOS_XR_bundlemgr_cfg;
+using namespace ydk::Cisco_IOS_XR_ipv6_ma_cfg;
 using namespace std;
 
-#define CONFIG_FILE "../config_read_isis.json"
+#define CONFIG_FILE "../config_read_ifmgr.json"
 
 void write_json_config(string json)
 {
@@ -65,7 +68,7 @@ int main(int argc, char* argv[])
         NetconfServiceProvider provider{host, username, password, port};
         CrudService crud{};
 
-        auto object = make_unique<Isis>();
+        auto object = make_unique<InterfaceConfigurations>();
         auto object_read = crud.read_config(provider, *object);
         if(object_read == nullptr)
         {

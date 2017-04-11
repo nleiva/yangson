@@ -22,18 +22,22 @@
 #include <ydk/netconf_provider.hpp>
 #include <ydk/types.hpp>
 
-#include "ydk_cisco_ios_xr/Cisco_IOS_XR_clns_isis_cfg.hpp"
-#include "ydk_cisco_ios_xr/Cisco_IOS_XR_clns_isis_datatypes.hpp"
+#include "ydk_openconfig/openconfig_routing_policy.hpp"
+#include "ydk_openconfig/openconfig_bgp_policy.hpp"
+#include "ydk_openconfig/openconfig_policy_types.hpp"
+#include "ydk_openconfig/openconfig_types.hpp"
 #include <spdlog/spdlog.h>
 
 #include "../args_parser.h"
 
 using namespace ydk;
-using namespace ydk::Cisco_IOS_XR_clns_isis_cfg;
-using namespace ydk::Cisco_IOS_XR_clns_isis_datatypes;
+using namespace ydk::openconfig_routing_policy;
+using namespace ydk::openconfig_bgp_policy;
+using namespace ydk::openconfig_policy_types;
+using namespace ydk::openconfig_types;
 using namespace std;
 
-#define CONFIG_FILE "../config_read_isis.json"
+#define CONFIG_FILE "../config_read_oc-policy.json"
 
 void write_json_config(string json)
 {
@@ -65,7 +69,7 @@ int main(int argc, char* argv[])
         NetconfServiceProvider provider{host, username, password, port};
         CrudService crud{};
 
-        auto object = make_unique<Isis>();
+        auto object = make_unique<RoutingPolicy>();
         auto object_read = crud.read_config(provider, *object);
         if(object_read == nullptr)
         {

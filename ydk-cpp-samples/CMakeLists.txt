@@ -3,11 +3,14 @@ cmake_policy(SET CMP0048 NEW)
 project(samples)
 
 
-set(SAMPLE_DESCRIPTION "BGP sample application using YANG Development Kit Library, the library for YDK API.")
+set(SAMPLE_DESCRIPTION "Sample applications using YANG Development Kit Library, the library for YDK API.")
 
 
 set(samples bgp_xr_read
-			isis_xr_read
+            oc-policy_xr_read
+            policy_xr_read
+            isis_xr_read
+            ifmgr_xr_read
             bgp_xr_write)
 
 # set default build type if not specified by user
@@ -16,6 +19,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 set(CMAKE_CXX_FLAGS_DEBUG   "-g -O0 -fprofile-arcs -ftest-coverage")
 
 # Find dependent libraries
+find_library(ydk_openconfig_location ydk_openconfig)
 find_library(ydk_location ydk)
 find_library(ydk_cisco_ios_xr_location ydk_cisco_ios_xr)
 find_library(xml2_location xml2)
@@ -26,6 +30,7 @@ find_library(pcre_location pcre)
 find_library(xslt_location xslt)
 find_library(pthread_location pthread)
 find_library(dl_location dl)
+find_package(PythonLibs REQUIRED)
 
 include_directories(SYSTEM)
 
@@ -38,9 +43,9 @@ foreach(sample IN LISTS samples)
     add_executable(${sample} ${sample}.cpp ../args_parser.cpp)
 
     target_link_libraries(${sample}
-            ${ydk_location} 
+            ${ydk_openconfig_location}
             ${ydk_cisco_ios_xr_location} 
-            ${ydk_location}
+            ${ydk_location} 
             ${xml2_location}
             ${curl_location}
             ${ssh_location}
@@ -49,6 +54,7 @@ foreach(sample IN LISTS samples)
             ${xslt_location}
             ${pthread_location}
             ${dl_location}
+            ${PYTHON_LIBRARIES}
             -rdynamic
             )
 

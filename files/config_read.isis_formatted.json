@@ -1,0 +1,132 @@
+{
+  "Cisco-IOS-XR-clns-isis-cfg:isis": {
+    "instances": {
+      "instance": [
+        {
+          "instance-name": "BB2",
+          "is-type": "level2",
+          "running": [
+            null
+          ],
+          "afs": {
+            "af": [
+              {
+                "af-name": "ipv6",
+                "saf-name": "unicast",
+                "af-data": {
+                  "metric-styles": {
+                    "metric-style": [
+                      {
+                        "level": "not-set",
+                        "style": "new-metric-style",
+                        "transition-state": "disabled"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "interfaces": {
+            "interface": [
+              {
+                "interface-name": "Bundle-Ether20",
+                "point-to-point": [
+                  null
+                ],
+                "running": [
+                  null
+                ],
+                "interface-afs": {
+                  "interface-af": [
+                    {
+                      "af-name": "ipv6",
+                      "saf-name": "unicast",
+                      "interface-af-data": {
+                        "running": [
+                          null
+                        ],
+                        "metrics": {
+                          "metric": [
+                            {
+                              "level": "not-set"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "interface-name": "HundredGigE0/0/0/0",
+                "point-to-point": [
+                  null
+                ],
+                "running": [
+                  null
+                ],
+                "interface-afs": {
+                  "interface-af": [
+                    {
+                      "af-name": "ipv6",
+                      "saf-name": "unicast",
+                      "interface-af-data": {
+                        "running": [
+                          null
+                        ],
+                        "metrics": {
+                          "metric": [
+                            {
+                              "level": "not-set"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "interface-name": "HundredGigE0/0/0/1",
+                "point-to-point": [
+                  null
+                ],
+                "running": [
+                  null
+                ],
+                "interface-afs": {
+                  "interface-af": [
+                    {
+                      "af-name": "ipv6",
+                      "saf-name": "unicast",
+                      "interface-af-data": {
+                        "running": [
+                          null
+                        ],
+                        "metrics": {
+                          "metric": [
+                            {
+                              "level": "not-set"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "nets": {
+            "net": [
+              {
+                "net-name": "49.0000.0020.0000.0001.00"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

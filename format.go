@@ -11,8 +11,8 @@ func main() {
 	//Option to read from static string
 	//b := []byte(`{"Cisco-IOS-XR-ipv4-bgp-cfg:bgp":"empty"}`)
 
-	input := "files/bgp.json"
-	output := "files/bgp_formatted.json"
+	input := "files/config_read_ifmgr.json"
+	output := "files/config_read_ifmgr.json_formatted.json"
 
 	b, err := ioutil.ReadFile(input) // just pass the file name
 	if err != nil {
